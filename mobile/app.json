@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "Puja",
+    "slug": "sistema-pujas",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": { "backgroundColor": "#f6f5f2" },
+    "ios": { "supportsTablet": true },
+    "android": { "adaptiveIcon": { "backgroundColor": "#d8e85f" }, "edgeToEdgeEnabled": true }
+  }
+}

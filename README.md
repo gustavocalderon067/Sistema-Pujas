@@ -81,3 +81,18 @@ npm run dev
 ```
 
 Antes de iniciarla, deja PostgreSQL y el backend activos. El comando de desarrollo inicia Vite para la interfaz y abre la ventana Electron. Si ya tienes Vite ocupando el puerto 5173, detén ese proceso antes de arrancar el escritorio.
+
+## Aplicación móvil (Expo)
+
+```bash
+cd mobile
+npm install
+```
+
+Configura `mobile/.env` con la IP local de la computadora en la que corre el backend (por ejemplo, `EXPO_PUBLIC_API_URL=http://192.168.1.20:4000/api`). En un teléfono físico, `localhost` apunta al teléfono, no a la computadora. Permite esa IP en `CORS_ORIGIN` del backend y asegúrate de que ambos estén en la misma red Wi-Fi. Después:
+
+```bash
+npx expo start
+```
+
+Abre Expo Go y escanea el QR. En Android Emulator la dirección del host suele ser `http://10.0.2.2:4000/api`; en iOS Simulator se puede usar `http://localhost:4000/api`.
