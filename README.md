@@ -69,3 +69,15 @@ npm run dev
 ```
 
 Abre la dirección de Vite (normalmente `http://localhost:5173`). La web se conecta al backend en `http://localhost:4000/api`; para cambiarlo, crea `web/.env` con `VITE_API_URL=http://localhost:4000/api`. Mantén ese origen incluido en `backend/.env` dentro de `CORS_ORIGIN`.
+
+## Aplicación de escritorio
+
+La app de escritorio usa Electron y abre la misma interfaz React de `web`, para compartir las funciones y datos con el navegador.
+
+```bash
+cd desktop
+npm install
+npm run dev
+```
+
+Antes de iniciarla, deja PostgreSQL y el backend activos. El comando de desarrollo inicia Vite para la interfaz y abre la ventana Electron. Si ya tienes Vite ocupando el puerto 5173, detén ese proceso antes de arrancar el escritorio.
