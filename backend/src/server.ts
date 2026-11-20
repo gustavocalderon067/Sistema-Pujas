@@ -16,7 +16,7 @@ const sweepAuctions = async () => {
   } catch (error) { console.error("No se pudieron actualizar las subastas vencidas", error); }
 };
 
-server.listen(env.PORT, () => console.log(`API escuchando en http://localhost:${env.PORT}`));
+server.listen(env.PORT, "0.0.0.0", () => console.log(`API escuchando en http://0.0.0.0:${env.PORT}`));
 void sweepAuctions();
 setInterval(() => void sweepAuctions(), 15_000).unref();
 
